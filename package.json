@@ -1,0 +1,58 @@
+{
+  "name": "cna",
+  "version": "1.0.12",
+  "description": "CLI for creating next.js apps boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'bin/**/*.js'",
+    "pub": "npm version patch && npm publish"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ]
+  },
+  "bin": {
+    "cna": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChoTotOSS/cna.git"
+  },
+  "keywords": [
+    "nextjs",
+    "boilerplate",
+    "stater-kit",
+    "cli",
+    "redux",
+    "reactjs",
+    "flux",
+    "styled-components"
+  ],
+  "authors": [
+    "David Nguyen <dzungnguyen179@gmail.com> (https://github.com/davidnguyen179)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChoTotOSS/cna/issues"
+  },
+  "homepage": "https://chototoss.github.io/cna/",
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "commander": "^2.10.0",
+    "fs-extra": "^4.0.0",
+    "plop": "^1.8.1",
+    "semver": "^5.3.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.2",
+    "prettier": "^1.6.1"
+  },
+  "npmName": "cna"
+}
